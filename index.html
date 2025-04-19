@@ -2,96 +2,128 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <title>LegioBot Chat</title>
+  <title>Academia Legio VII - Asistente</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background: #f4f4f4;
       margin: 0;
-      padding: 20px;
+      font-family: Arial, sans-serif;
+    }
+
+    #chat-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #111;
+      color: #fff;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      font-size: 24px;
+      text-align: center;
+      line-height: 60px;
+      cursor: pointer;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+      z-index: 999;
+    }
+
+    #chat-container {
+      display: none;
+      position: fixed;
+      bottom: 90px;
+      right: 20px;
+      width: 320px;
+      height: 430px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.3);
+      overflow: hidden;
+      z-index: 998;
+      flex-direction: column;
+      display: flex;
+    }
+
+    #chat-header {
+      background: #222;
+      color: #fff;
+      padding: 10px;
+      font-weight: bold;
+      text-align: center;
     }
 
     #chatbox {
-      max-width: 600px;
-      margin: auto;
-      background: #fff;
-      border-radius: 10px;
-      padding: 20px;
-      box-shadow: 0 0 10px #ccc;
-      display: flex;
-      flex-direction: column;
-      height: 80vh;
-    }
-
-    #chat {
-      flex-grow: 1;
+      flex: 1;
+      padding: 10px;
       overflow-y: auto;
-      margin-bottom: 10px;
+      font-size: 14px;
+      background: #f9f9f9;
     }
 
-    .msg {
-      margin: 10px 0;
+    #userInput {
+      width: calc(100% - 70px);
       padding: 10px;
-      border-radius: 10px;
-      max-width: 75%;
+      border: none;
+      border-top: 1px solid #ccc;
+      outline: none;
     }
 
-    .user {
-      align-self: flex-end;
-      background: #dcf8c6;
-    }
-
-    .bot {
-      align-self: flex-start;
-      background: #eee;
-      font-style: italic;
-    }
-
-    input[type="text"] {
+    button {
+      width: 70px;
       padding: 10px;
-      font-size: 16px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      width: 100%;
+      border: none;
+      background: #222;
+      color: #fff;
+      cursor: pointer;
+      border-top: 1px solid #ccc;
     }
   </style>
 </head>
 <body>
-  <div id="chatbox">
-    <div id="chat"></div>
-    <input id="userInput" type="text" placeholder="Pregúntame lo que quieras sobre la academia..." />
+
+  <!-- Botón flotante -->
+  <div id="chat-button" onclick="toggleChat()">💬</div>
+
+  <!-- Ventana de chat -->
+  <div id="chat-container">
+    <div id="chat-header">Asistente Legio VII 🥋</div>
+    <div id="chatbox"></div>
+    <div style="display: flex;">
+      <input type="text" id="userInput" placeholder="Escribe tu pregunta..." />
+      <button onclick="sendMessage()">Enviar</button>
+    </div>
   </div>
 
   <script>
-    async function enviarMensaje(texto) {
-      const chat = document.getElementById("chat");
-      chat.innerHTML += `<div class="msg user">${texto}</div>`;
+    const API_URL = "https://legio-chatbot.onrender.com/chat"; // cambia si tu URL es distinta
 
-      try {
-        const res = await fetch("/chat", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json"
-          },
-          body: JSON.stringify({ message: texto })
-        });
-
-        const data = await res.json();
-        chat.innerHTML += `<div class="msg bot">${data.reply}</div>`;
-        chat.scrollTop = chat.scrollHeight;
-      } catch (error) {
-        chat.innerHTML += `<div class="msg bot">❌ Error al conectar con LegioBot.</div>`;
-        console.error(error);
-      }
+    function toggleChat() {
+      const container = document.getElementById("chat-container");
+      container.style.display = container.style.display === "block" ? "none" : "block";
     }
 
-    document.getElementById("userInput").addEventListener("keypress", function (e) {
-      if (e.key === "Enter" && e.target.value.trim() !== "") {
-        const texto = e.target.value;
-        e.target.value = "";
-        enviarMensaje(texto);
+    async function sendMessage() {
+      const input = document.getElementById("userInput");
+      const chatbox = document.getElementById("chatbox");
+      const message = input.value.trim();
+
+      if (!message) return;
+
+      chatbox.innerHTML += `<div><strong>Tú:</strong> ${message}</div>`;
+      input.value = "";
+
+      try {
+        const response = await fetch(API_URL, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ message })
+        });
+
+        const data = await response.json();
+        chatbox.innerHTML += `<div><strong>Bot:</strong> ${data.reply}</div>`;
+        chatbox.scrollTop = chatbox.scrollHeight;
+      } catch (err) {
+        chatbox.innerHTML += `<div><strong>Error:</strong> No se pudo contactar con el bot.</div>`;
       }
-    });
+    }
   </script>
 </body>
 </html>
