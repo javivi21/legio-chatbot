@@ -75,7 +75,7 @@ Responde con claridad, cercanía y sólo con esta información. No inventes nada
 - Alex Álvarez: Judo general
 
 📲 CONTACTO:
-- WhatsApp: 686691776
+- WhatsApp: +34 654 75 65 46
 - Email: academialegio@gmail.com
 - Web: www.academialegiovii.com
 - Instagram: @academia_legiovii
