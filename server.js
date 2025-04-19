@@ -1,3 +1,4 @@
+// server.js
 const express = require('express');
 const fetch = require('node-fetch');
 const cors = require('cors');
@@ -9,7 +10,7 @@ const PORT = process.env.PORT || 3000;
 
 app.use(cors());
 app.use(express.json());
-app.use(express.static(__dirname)); // Servir archivos estáticos como index.html
+app.use(express.static(__dirname)); // Sirve index.html y widget.js
 
 app.post('/chat', async (req, res) => {
   const userMessage = req.body.message;
@@ -51,7 +52,22 @@ Contacto:
     });
 
     const data = await response.json();
-    res.json({ reply: data.choices[0].message.content });
+
+    // Control de errores en la respuesta
+    if (!response.ok) {
+      console.error('OpenAI API error:', data);
+      return res.status(500).json({ reply: '❌ La API de OpenAI devolvió un error.' });
+    }
+
+    if (!data.choices || data.choices.length === 0) {
+      console.error('OpenAI API returned no choices:', data);
+      return res.status(500).json({ reply: '❌ No he recibido respuesta válida de la IA.' });
+    }
+
+    // Todo correcto
+    const reply = data.choices[0].message.content;
+    res.json({ reply });
+
   } catch (error) {
     console.error('Error al conectar con OpenAI:', error);
     res.status(500).json({ reply: '❌ Error al conectar con OpenAI.' });
