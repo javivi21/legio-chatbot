@@ -5,7 +5,7 @@ const path = require('path');
 require('dotenv').config();
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT; // Render usa este puerto automáticamente
 
 app.use(cors());
 app.use(express.json());
@@ -101,10 +101,6 @@ No inventes. Usa exclusivamente esta información.
     res.status(500).json({ reply: `❌ Error de conexión: ${err.message}` });
   }
 });
-
-app.get('/', (req, res) => res.sendFile(path.join(__dirname, 'index.html')));
-app.listen(PORT, () => console.log(`Servidor en puerto ${PORT}`));
-
 
 app.get('/', (req, res) => res.sendFile(path.join(__dirname, 'index.html')));
 app.listen(PORT, () => console.log(`Servidor en puerto ${PORT}`));
