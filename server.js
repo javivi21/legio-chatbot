@@ -62,6 +62,12 @@ Responsable: Javier Arias.
 - Principiantes: guardia y escapes (Sergio Patricio).
 - Adultos: posiciones avanzadas (Jonatan González, Nikolay Dimitrov).
 
+## BOXEO
+- Adultos a partir de los 14 años. 
+- Principiantes y avanzados, boxeo sin contacto, y con contacto según las adaptaciones
+y deseos de los alumnos. 
+Responsable es: Fran Robles. 
+
 ## 💪 FULL BODY LEGIO
 Circuitos HIIT de fuerza y movilidad.  
 Responsable: Equipo técnico Legio VII.
