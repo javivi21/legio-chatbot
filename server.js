@@ -50,17 +50,19 @@ app.post('/chat', async (req, res) => {
     if (esNiño) {
       respuestaTarifa = quiereDos
         ? "Para niños que hacen dos actividades, la cuota es de 51,50 € al mes."
-        : "Para niños que hacen una sola actividad, el precio es 41,20 € al mes. ¿Quieres saber cuánto cuesta si hace dos actividades?";
+        : "Para niños que hacen una sola actividad, el precio es 41,20 € al mes.";
     } else if (esAdulto) {
-      respuestaTarifa = "La cuota mensual para adultos es de 61,80 €. También puedes pagar anualmente en cuotas de 55,60 € al mes (compromiso de 12 meses).";
+      respuestaTarifa = "Para adultos, la cuota mensual es de 61,80 €. También puedes pagar anualmente: 55,60 € al mes con compromiso de 12 meses.";
     } else {
-      respuestaTarifa = "¿Es para un adulto o un niño? Así te doy la tarifa exacta.";
+      respuestaTarifa = `👉 Para adultos: 61,80 € al mes (o 55,60 € si pagas el año).  
+👉 Para niños: 41,20 € por una actividad.  
+¿Quieres saber cuánto cuesta hacer dos actividades infantiles? Te lo cuento.`;
     }
 
     return res.json({ reply: respuestaTarifa });
   }
 
-  // 🧠 Si no entra en lógica de precios, lanza a GPT
+  // 🧠 Si no es sobre precios, delegamos a OpenAI
   try {
     const response = await fetch('https://api.openai.com/v1/chat/completions', {
       method: 'POST',
@@ -91,4 +93,5 @@ app.post('/chat', async (req, res) => {
 
 app.get('/', (req, res) => res.sendFile(path.join(__dirname, 'index.html')));
 app.listen(PORT, () => console.log(`Servidor en puerto ${PORT}`));
+
 
