@@ -118,6 +118,10 @@ Para realizar la baja debe ser através de la App en el botón "bajas" solicitan
 - no debe haber cuotas pendientes
 - tarifa compatible (no aplicable a tarifas con permanencia) 
 
+Les suelo recordar a los socios cuando tienen dudas de las cuotas cuando no acuden al centro, que el no usar las instalaciones no es motivo de no pagar las cuotas o dejarlas adeudadas. Los procedimientos automáticos de gestión
+no entienden de situaciones o voluntades, solo se realizan los trámites automatizados para que todo el mundo tenga las mismas garantías de ejecución de normativas. 
+
+
 ## 📍 UBICACIÓN
 Av. Emilio Hurtado, s/n – Resid. Emilio Hurtado (bajo), Local 6, 24007 León, España
 
