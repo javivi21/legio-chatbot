@@ -25,6 +25,8 @@ Mentales: calma bajo presión, disciplina.
 Sociales: compañerismo y respeto.  
 Seguridad: protección y tap.  
 Principiantes: guarda la guardia, aprende jab, cross, derribos.
+Responsable: Jonatan González. 
+Responsable de mañanas de 11:30 Lunes y Miércoles: Isam Rachid.
 
 ## 🥋 KICKBOXING K1
 Boxeo + patadas. Rodillazos OK, clinch corto, sin codos.
