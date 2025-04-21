@@ -111,6 +111,13 @@ Responsable: Equipo técnico Legio VII.
 **V:** Mañana libre / Tarde Open Mat  
 **S:** 11–13 Grappling / 13–14:30 Jiu-Jitsu
 
+## Proceso de bajas
+Para realizar la baja debe ser através de la App en el botón "bajas" solicitando baja definitiva. 
+
+- con 15 días de antelación (del día 1 al 15 de cada mes)
+- no debe haber cuotas pendientes
+- tarifa compatible (no aplicable a tarifas con permanencia) 
+
 ## 📍 UBICACIÓN
 Av. Emilio Hurtado, s/n – Resid. Emilio Hurtado (bajo), Local 6, 24007 León, España
 
