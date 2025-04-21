@@ -173,10 +173,9 @@ Posiciones avanzadas y flow drills.
 ---
 ## BOXEO
 **ADULTOS A PARTIR DE 14 AÑOS:**  
+El boxeo de la mano del maestro Fran Robles, es uno de los deportes aeróbicos más intensos y 
+que a su vez proporciona habilidad pugilistica, y guantazos unos cuantos! 
 **Responsable:** Fran Robles.
-
-
-
 
 
 ---
