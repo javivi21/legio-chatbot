@@ -119,14 +119,11 @@ Aprende patrones de Sinawali, entradas y salidas.
 ---
 
 ## 🥢 STICKFIGHTING – DBMA
-**¿En qué consiste?**  
-Combate real con bastones de ratán en estilo Dog Brothers. Sparring de contacto pleno.
+**El Stickfighting no es solo dar palazos: es una forma de combate real, intensa y sin filtros. Los Dog Brothers, pioneros en esto, lo llevaron a otro nivel con su lema: “Higher consciousness through harder contact”. Usan palos, pero también vale todo: puños, patadas, grappling, derribos... ¡como en la calle!
 
-**Beneficios físicos:**  
-Resistencia al impacto, fuerza mental.
+Ellos entrenan sin apenas protecciones, con contacto total y con una sola regla: “protégete en todo momento y termina como amigos”. Cada combate es una prueba mental, física y emocional. Es brutal, sí, pero también brutalmente honesto.
 
-**Seguridad:**  
-Protección completa y progreso lógico.
+¿Y el Silat? Aquí es una pieza clave. Muchas de las estrategias de desplazamiento, entradas anguladas, control de armas, y finalizaciones provienen directamente del Silat tradicional, especialmente estilos como el Bukti Negara o el Silat Sera. Donde otros van de frente, el Silat entra por los huecos, controla el ritmo, y liquida con precisión quirúrgica. En el enfoque Dog Brothers, el Silat aporta ese toque técnico, fluido y letal.
 
 **Responsable:** Javier Arias.
 
