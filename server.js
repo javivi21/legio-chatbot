@@ -76,16 +76,38 @@ Responsable: Equipo técnico Legio VII.
 
 ## 💰 TARIFAS (2025)
 • Todo incluido: 61,80 €/mes  
-• Anual (fracc.): 55,60 €/mes (total 667,20 €)  
-• Estudiantes: 55,62 €/mes  
+• Anual (fracc.): 55,60 €/mes con compromiso de 12 meses. 
+
+• Las tarifas de Estudiantes: 55,62 €/mes  desde Septiembre a Febrero, esta tarifa requiere permanencia del curso Académico, hasta final de Junio. 
+
 • Niños 1 act.: 41,20 €/mes  
 • Niños 2 acts.: 51,50 €/mes  
+
 • Full Body: 36,05 €/mes  
-• Excedencia: 12,88 €/mes
+
 
 ## 📆 HORARIOS
-**L y X:** 10:30–11:30 Full Body; 11:30–12:30 MMA/K1/Grappling; 17–18 MMA; 18–19 Grappling; 19–20 K1; 20–21:30 Jiu-Jitsu  
-**M y J:** 12:30–13:30 Jiu-Jitsu; 17–18 K1 Infantil; 18–19 Judo/Jiu-Jitsu alternos; 18:30–20 Boxeo; 19:30–21:30 Silat/Kali/Stickfight; 20–21 Jiu-Jitsu principiantes  
+
+**L y X:** 10:30–11:30 Full Body; 
+
+11:30–12:30 MMA/K1/Grappling;
+
+17–18 MMA; 18–19 Grappling;
+
+19–20 K1; 
+
+20–21:30 Jiu-Jitsu  **M y J:** 12:30–13:30 Jiu-Jitsu; 
+
+17–18 K1 Infantil;
+
+18–19 Judo/Jiu-Jitsu alternos; 
+
+18:30–20 Boxeo; 
+
+19:30–21:30 Silat/Kali/Stickfight;
+
+20–21 Jiu-Jitsu principiantes  
+
 **V:** Mañana libre / Tarde Open Mat  
 **S:** 11–13 Grappling / 13–14:30 Jiu-Jitsu
 
