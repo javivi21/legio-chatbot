@@ -12,12 +12,23 @@ const conocimiento_legio = `
 Responde siempre con frases cortas, claras y concisas. Nada de párrafos largos ni explicaciones innecesarias.
 Usa un tono cercano y profesional. No inventes nada que no esté en este documento.
 
-# ACADEMIA LEGIO VII – GUÍA COMPLETA DE DISCIPLINAS Y RESPONSABLES
+# ACADEMIA LEGIO VII – DISCIPLINAS
 
-## 🥋 PRESENTACIÓN GENERAL
-Academia Legio VII es un centro de formación marcial en León, España, especializado en artes marciales tradicionales, sistemas de combate moderno y metodologías aplicadas a defensa personal y competición. Integra disciplinas del Sudeste Asiático como Silat y Eskrima con artes marciales modernas como Jiu-Jitsu, Grappling, MMA, Kickboxing y Stickfighting, formando un sistema técnico sólido, realista y estructurado.
+Las disciplinas disponibles en la academia son: Silat, Kali, Stickfighting, MMA, Grappling, K1, Jiu-Jitsu, Judo, Defensa Personal, Full Body y Boxeo.
 
-... (tu contenido original completo puede continuar aquí sin problema) ...
+## BOXEO
+Disciplina de golpeo enfocada en puños, desplazamientos, defensa y ritmo. Apta para adultos desde los 14 años.  
+Modalidad técnica (sin contacto) y con contacto progresivo según nivel.  
+Clases: Martes y Jueves de 18:30 a 20:00.  
+Responsable: Fran Robles.
+
+## TARIFAS 2025
+• Adulto mensual: 61,80 €  
+• Adulto anual (compromiso 12 meses): 55,60 €/mes  
+• Niño (1 actividad): 41,20 €  
+• Niño (2 actividades): 51,50 €  
+• Full Body: 36,05 €/mes  
+(No mostrar tarifa de excedencia salvo que se solicite explícitamente)
 `;
 
 app.use(cors());
@@ -26,13 +37,13 @@ app.use(express.static(__dirname));
 
 app.post('/chat', async (req, res) => {
   const userMessage = req.body.message;
+  const texto = userMessage.toLowerCase();
 
   // 🔍 Lógica personalizada para tarifas
-  const texto = userMessage.toLowerCase();
   if (texto.includes("precio") || texto.includes("tarifa") || texto.includes("cuánto cuesta") || texto.includes("vale")) {
-    const esNiño = /(niñ[oa]|hij[oa]|peque|infantil)/.test(texto);
-    const quiereDos = /(dos|2|varias|más de una)/.test(texto);
-    const esAdulto = /(adult[oa]|yo|mayor|persona)/.test(texto);
+    const esNiño = /(niñ[oa]s?|hij[oa]s?|peque|infantil)/.test(texto);
+    const quiereDos = /(dos|2|varias|más de una|doble|dos actividades)/.test(texto);
+    const esAdulto = /(adult[oa]s?|mayor(es)?|yo|para mí|persona(s)?|gente grande)/.test(texto);
 
     let respuestaTarifa = "";
 
@@ -41,15 +52,15 @@ app.post('/chat', async (req, res) => {
         ? "Para niños que hacen dos actividades, la cuota es de 51,50 € al mes."
         : "Para niños que hacen una sola actividad, el precio es 41,20 € al mes. ¿Quieres saber cuánto cuesta si hace dos actividades?";
     } else if (esAdulto) {
-      respuestaTarifa = "La cuota mensual para adultos es de 61,80 €. También puedes pagar anualmente en cuotas de 55,60 € al mes.";
+      respuestaTarifa = "La cuota mensual para adultos es de 61,80 €. También puedes pagar anualmente en cuotas de 55,60 € al mes (compromiso de 12 meses).";
     } else {
-      respuestaTarifa = "¿Es para un adulto o un niño? Así te digo la tarifa que corresponde.";
+      respuestaTarifa = "¿Es para un adulto o un niño? Así te doy la tarifa exacta.";
     }
 
     return res.json({ reply: respuestaTarifa });
   }
 
-  // 🧠 Si no es una pregunta sobre tarifas, seguimos con GPT
+  // 🧠 Si no entra en lógica de precios, lanza a GPT
   try {
     const response = await fetch('https://api.openai.com/v1/chat/completions', {
       method: 'POST',
@@ -71,6 +82,7 @@ app.post('/chat', async (req, res) => {
       const msg = data.error?.message || 'Error IA';
       return res.status(500).json({ reply: `❌ ${msg}` });
     }
+
     res.json({ reply: data.choices[0].message.content });
   } catch (err) {
     res.status(500).json({ reply: `❌ Conexión fallida: ${err.message}` });
@@ -79,3 +91,4 @@ app.post('/chat', async (req, res) => {
 
 app.get('/', (req, res) => res.sendFile(path.join(__dirname, 'index.html')));
 app.listen(PORT, () => console.log(`Servidor en puerto ${PORT}`));
+
