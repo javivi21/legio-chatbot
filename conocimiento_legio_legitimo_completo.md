@@ -171,6 +171,15 @@ Posiciones avanzadas y flow drills.
 **Responsable:** Jonatan González, Nikolay Dimitrov.
 
 ---
+## BOXEO
+**ADULTOS A PARTIR DE 14 AÑOS:**  
+**Responsable:** Fran Robles.
+
+
+
+
+
+---
 
 ## 💪 FULL BODY LEGIO
 Circuitos HIIT de fuerza, resistencia y movilidad. Adaptado a niveles.
