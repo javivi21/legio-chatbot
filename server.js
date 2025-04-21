@@ -98,9 +98,9 @@ Responsable: Equipo técnico Legio VII.
 
 20–21:30 Jiu-Jitsu  **M y J:** 12:30–13:30 Jiu-Jitsu; 
 
-17–18 K1 Infantil;
+17–18 K1 Infantil (1 actividad);
 
-18–19 Judo/Jiu-Jitsu alternos; 
+18–19 Judo/Jiu-Jitsu alternos(1 actividad); 
 
 18:30–20 Boxeo; 
 
