@@ -143,6 +143,20 @@ Control antes que golpeo, usa objetos cotidianos.
 
 ---
 
+## JUDO
+Arte marcial de origen japonés centrado en proyecciones, controles, caídas seguras y trabajo técnico.  
+Hay dos niveles:
+
+- **Judo Infantil**: juegos, desplazamientos y caídas adaptadas a los más pequeños.  
+  🧒 Responsable: Alejandro García.
+
+- **Judo General (adultos)**: nage-waza (técnicas de proyección), katame-waza (controles en suelo) y randori (combate libre).  
+  🧔 Responsable: Alex Álvarez.
+
+**Clases de Judo:**  
+- Martes y Jueves de 18:00 a 19:00 (alternan con Jiu-Jitsu infantil)
+
+
 ## 🧒 JUDO INFANTIL / GENERAL
 **Infantil:**  
 Juegos y proyecciones controladas.  
