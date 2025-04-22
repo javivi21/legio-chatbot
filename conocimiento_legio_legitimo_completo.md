@@ -191,6 +191,15 @@ que a su vez proporciona habilidad pugilistica, y guantazos unos cuantos!
 
 ---
 
+## Profesores y Maestros
+
+Actualmente contamos en la Academia con Maestros de la más alta cualificación.
+Maestros de entrenadores nivel IV Javier Arias y Alex Álvarez
+por las federaciones de lucha y de Judo respectivamente
+Entrenadores y Monitores Como Alejandro García y Jonatan González.
+En Judo y Grappling-MMA respectivamente. 
+
+
 ## 💪 FULL BODY LEGIO
 Circuitos HIIT de fuerza, resistencia y movilidad. Adaptado a niveles.
 
